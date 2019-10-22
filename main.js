@@ -17,3 +17,4 @@ backgroundButton.addEventListener("click", () => {
   paragraph.classList.add("redBackground");
   paragraph.classList.remove("newParagraph");
 });
+// stuff
