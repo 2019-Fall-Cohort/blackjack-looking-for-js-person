@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Team N + 1</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./dropdownbar.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <p>Dihydrogen monoxide kills. Research before you hydrate!</p>
-
+  <p>Dihydrogen monoxide kills. Research before you hydrate!</p>
+  <div class="navbar">
+    <div class="dropdown">
+      <button class="dropbutton">
+        Options
+        <i class="fa fa-caret-down"></i>
+      </button>
+        <div class="dropdown-content">
+          <a href="#">Restart Game</a>
+          <a href="#">Enter Name</a>
+        </div>
+    </div>
     
     <div class="container"></div>
     <header>
@@ -30,7 +41,8 @@
         </section>
     </main>
 
-    <script src="./index.js"></script>
+    <!-- Webpack will eventually build this file: -->
+    <script src="main.js"></script>
 </body>
 </html>
 
