@@ -1,4 +1,4 @@
-const {default: { singleDeckGame }} = require("blackjack-dealer-logic");
+const {default: { singleDeckGame, Result }} = require("blackjack-dealer-logic");
   
   singleDeckGame.deal();
   
@@ -66,6 +66,7 @@ restart.addEventListener("click", ()=>{
 
 })
 
+const userChips = document.getElementById("")
   
 
   
