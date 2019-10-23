@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <p>Dihydrogen monoxide kills. Research before you hydrate!</p>
   <div class="navbar">
     <div class="dropdown">
       <button class="dropbutton">
@@ -18,10 +17,13 @@
       </button>
         <div class="dropdown-content">
           <a href="#">Restart Game</a>
-          <a href="#">Enter Name</a>
+          <a href="#" id="prompt">Enter Name</a>
         </div>
-    </div>
-    
+        <output name="result" id="promptResponse"></output>
+      </div>
+
+
+
     <div class="container"></div>
     <header>
         <h1>Blackjack</h1>
@@ -30,7 +32,7 @@
         <button class="hit">Hit!</button>
         <button class="stand">Stand</button>
         <button class="double">Double!</button>
-        
+
         <section class="table">
             <section class="playing-card">
                 <section class="value-container">
