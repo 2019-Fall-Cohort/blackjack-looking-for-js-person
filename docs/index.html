@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Team N + 1</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./dropdownbar.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-    <p>Dihydrogen monoxide kills. Research before you hydrate!</p>
+  <div class="navbar">
+    <div class="dropdown">
+      <button class="dropbutton">
+        Options
+        <i class="fa fa-caret-down"></i>
+      </button>
+        <div class="dropdown-content">
+          <a href="#">Restart Game</a>
+          <a href="#" id="prompt">Enter Name</a>
+        </div>
+        <output name="result" id="promptResponse"></output>
+      </div>
 
-    
+
+
     <div class="container"></div>
     <header>
         <h1>Blackjack</h1>
@@ -18,11 +31,16 @@
     <main>
         <button id = "hitButton" class="hit">Hit!</button>
         <button class="stand">Stand</button>
+<<<<<<< HEAD
         <button class="double">Double!</button>
         <button id = "score" > Score</button>
         <button id = "clear">Restart</button>
         
         
+=======
+      <button class="double">Double!</button>
+          <button id = "score" > Score</button>
+>>>>>>> 9a06e35d125dd2dcf666ced86a659fbe402e986d
         <section class="table">
             <section class="playing-card">
                 <section class="value-container">
@@ -32,7 +50,6 @@
             </section>
         </section>
     </main>
-
     <script src="main.js"></script>
 </body>
 </html>
