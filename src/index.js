@@ -12,6 +12,15 @@ hit.forEach(function(button) {
   })
 });
 
+let enterName = document.getElementById('prompt');
+enterName.onclick = function() {
+  let userResponse = prompt('Type in your name, chief.');
+  let displayContainer = document.getElementById('promptResponse');
+  displayContainer.innerHTML = 'Welcome to the swankiest blackjack table in Cbus, ' + userResponse;
+}
+
+
+
 // ~~Alex reference 11:22 a.m. 10/22/2019:~~
 // backgroundButton.addEventListener("click", () => {
 //   const paragraph = document.querySelector(".newParagraph");
@@ -20,17 +29,17 @@ hit.forEach(function(button) {
 //   paragraph.classList.remove("newParagraph");
 // })
 
-stand.forEach(function(button) {
-  button.addEventListener("click", () => {
-    stand():
-  })
-});
+// stand.forEach(function(button) {
+//   button.addEventListener("click", () => {
+//     stand()
+//   })
+// });
 
-double.forEach(function(button) {
-  button.addEventListener("click", () => {
-    double(card: Card):
-  })
-});
+// double.forEach(function(button) {
+//   button.addEventListener("click", () => {
+//     double(card : Card)
+//   })
+// });
 // const backgroundButton = document.querySelector(".addBackground");
 
 button.forEach(function(button) {
