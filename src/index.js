@@ -5,7 +5,7 @@ const {default: { singleDeckGame}} = require("blackjack-dealer-logic");
   
   const userHand = singleDeckGame.getUserHand();
   
-  
+  getChips();
   generateCard(userHand.getCards()[0]);
   generateCard(userHand.getCards()[1]);
 
@@ -66,7 +66,20 @@ restart.addEventListener("click", ()=>{
 
 })
 
-const userChips = document.getElementById("")
+function getChips(){
+  const userAmount = singleDeckGame.getUserChips();
+  const change = document.createElement("h3");
+  change.innerText = userAmount;
+  document.body.append(change);
+
+}
+
+function bet(userAmount){
+  if(userAmount> 0){
+    
+  }
+
+}
   
 
   
