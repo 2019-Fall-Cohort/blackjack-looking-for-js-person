@@ -1,14 +1,26 @@
-// const {
-//   default: { singleDeckGame } } = require("blackjack-dealer-logic");
+const {
+  default: { singleDeckGame } } = require("blackjack-dealer-logic");
 
 // const buttons = document.querySelectorAll(".button");
-// const hit = document.querySelectorAll(".hit");
+const hit = document.querySelector(".hit");
 // const stand = document.querySelectorAll(".stand");
 // const double = document.querySelectorAll(".double");
+const Dom = require('./utils/Dom')
+
+hit.addEventListener("click", () => {
+
+  singleDeckGame.hitUser();
+  document.querySelector(".user").innerHTML = "";
+  Dom.renderCards(
+    singleDeckGame.getUserHand().getCards(),
+    document.querySelector(".user")
+  );
+})
+
 
 // hit.forEach(function(button) {
 //   button.addEventListener("click", () => {
-//     hitDealer()
+//     hitUser();
 //   })
 // })
 
