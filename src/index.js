@@ -1,3 +1,4 @@
+
 const {default: { singleDeckGame}} = require("blackjack-dealer-logic");
   
   singleDeckGame.deal();
@@ -42,31 +43,59 @@ hitButton.addEventListener("click", () =>{
     generateCard(card);
   })
 })
+const {
+  default: { singleDeckGame } } = require("blackjack-dealer-logic");
 
-const currScore = document.getElementById("score");
-currScore.addEventListener("click",()=>{
-  const score = document.createElement("h3");
-  score.classList.add("currentScore");
-  score.textContent = singleDeckGame.evaluateUser();
-  document.body.append(score);
+const buttons = document.querySelectorAll(".button");
+const hit = document.querySelectorAll(".hit");
+const stand = document.querySelectorAll(".stand");
+const double = document.querySelectorAll(".double");
 
-} )
+hit.forEach(function(button) {
+  button.addEventListener("click", () => {
+    hitDealer()
+  })
+});
 
-const restart = document.getElementById("clear");
-restart.addEventListener("click", ()=>{
-  const table = document.querySelector(".table");
-  table.innerHTML = "";
-  const playCard= document.querySelector(".playing-card");
-  playCard.innerHTML = "";
-  const values = document.querySelector(".value");
-  const suit = document.querySelector(".suit");
-  values.innerHTML= "";
-  suit.innerHTML= "";
+let enterName = document.getElementById('prompt');
+enterName.onclick = function() {
+  let userResponse = prompt('Type in your name, chief.');
+  let displayContainer = document.getElementById('promptResponse');
+  displayContainer.innerHTML = 'Welcome to the swankiest blackjack table in Cbus, ' + userResponse;
+}
 
 
-})
 
-const userChips = document.getElementById("")
-  
+// ~~Alex reference 11:22 a.m. 10/22/2019:~~
+// backgroundButton.addEventListener("click", () => {
+//   const paragraph = document.querySelector(".newParagraph");
 
-  
+//   paragraph.classList.add("redBackground");
+//   paragraph.classList.remove("newParagraph");
+// })
+
+// stand.forEach(function(button) {
+//   button.addEventListener("click", () => {
+//     stand()
+//   })
+// });
+
+// double.forEach(function(button) {
+//   button.addEventListener("click", () => {
+//     double(card : Card)
+//   })
+// });
+// const backgroundButton = document.querySelector(".addBackground");
+
+button.forEach(function(button) {
+  button.addEventListener("click", () => {
+    const paragraph = document.createElement("p");
+
+    paragraph.classList.add("newParagraph");
+
+    paragraph.textContent = "My new paragraph!";
+
+    document.body.append(paragraph);
+  });
+});
+
