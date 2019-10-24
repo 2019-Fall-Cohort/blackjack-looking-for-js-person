@@ -1,28 +1,48 @@
-const {
-  default: { singleDeckGame } } = require("blackjack-dealer-logic");
 
-// const buttons = document.querySelectorAll(".button");
-const hit = document.querySelector(".hit");
-// const stand = document.querySelectorAll(".stand");
-// const double = document.querySelectorAll(".double");
-const Dom = require('./utils/Dom')
+const {default: { singleDeckGame}} = require("blackjack-dealer-logic");
+  
+  singleDeckGame.deal();
+  
+  
+  const userHand = singleDeckGame.getUserHand();
+  
+  getChips();
+  generateCard(userHand.getCards()[0]);
+  generateCard(userHand.getCards()[1]);
 
-hit.addEventListener("click", () => {
+  
+  function generateCard(card) {
+    const playingCard = document.createElement("section");
+    playingCard.classList.add("playing-card");
+  
+    const valueContainer = document.createElement("section");
+    valueContainer.classList.add("value-container");
+  
+    const value = document.createElement("span");
+    value.classList.add("value");
+    value.textContent = card.getValue();
+  
+    const suit = document.createElement("span");
+    suit.classList.add("suit");
+    suit.textContent = card.getSuit();
+  
+    valueContainer.append(value);
+    valueContainer.append(suit);
+    playingCard.append(valueContainer);
+  
+    const table = document.querySelector(".table");
+    table.append(playingCard);
 
+  }
+const hitButton = document.getElementById("hitButton");
+hitButton.addEventListener("click", () =>{
   singleDeckGame.hitUser();
-  document.querySelector(".user").innerHTML = "";
-  Dom.renderCards(
-    singleDeckGame.getUserHand().getCards(),
-    document.querySelector(".user")
-  );
+  const table = document.querySelector(".table");
+  table.innerHTML = "";
+  singleDeckGame.getUserHand().getCards().forEach( (card) =>{
+    generateCard(card);
+  })
 })
-
-
-// hit.forEach(function(button) {
-//   button.addEventListener("click", () => {
-//     hitUser();
-//   })
-// })
 
 let enterName = document.getElementById('prompt');
 enterName.onclick = function() {
@@ -32,14 +52,13 @@ enterName.onclick = function() {
 }
 
 
-// stand.forEach(function(button) {
-//   button.addEventListener("click", () => {
-//     stand()
-//   })
-// })
 
-// double.forEach(function(button) {
-//   button.addEventListener("click", () => {
-//     double(card : Card)
-//   })
-// });
+function getChips(){
+  const userAmount = singleDeckGame.getUserChips();
+  const change = document.createElement("h3");
+  change.innerText = userAmount;
+  document.body.append(change);
+
+}
+
+
