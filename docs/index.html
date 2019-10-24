@@ -1,56 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Team N + 1</title>
-    <link rel="stylesheet" href="./dropdownbar.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-  <header>
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbutton">
-            Options
-            <i class="fa fa-caret-down"></i>
-          </button>
-            <div class="dropdown-content">
-              <a href="#">Restart Game</a>
-              <a href="#" id="prompt">Enter Name</a>
-            </div>
-            <output name="result" id="promptResponse"></output>
-        </div>
-    <div class="container"></div>
-        <header>
-
-
-          <h1>Blackjack</h1>        </div>
-      </div>
-    </header>        <b
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Blackjack</h1>
+      </header>
+      <main>
         <section class="table">
-          <h3>Dealer Hand</h3>
+          <h3>Dealer Hand:</h3>
           <section class="dealer"></section>
-          <h3>Player Hand</h3>
+          <h3>User Hand:</h3>
           <section class="user"></section>
         </section>
-        <button class="stand">Stand</button>
-        <button class="double">Double!</button>
-
-
-
-        <!-- <section class="table">
-            <section class="playing-card">
-                <section class="value-container">
-                    <span class="value">placeholder</span>
-                    <span class="suit">placeholder</span>
-                </section>
-            </section>
-        </section>
-    </main> -->    <!-- Webpack will eventually build this file: -->
+        <button class="hit">Hit</button>
+      </main>
+    </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
-
-
