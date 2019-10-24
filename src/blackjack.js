@@ -29,3 +29,4 @@ const {default: { singleDeckGame }} = require("blackjack-dealer-logic");
     const table = document.querySelector(".table");
     table.append(playingCard);
   }
+  

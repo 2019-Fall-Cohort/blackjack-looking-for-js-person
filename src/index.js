@@ -3,9 +3,10 @@ const {default: { singleDeckGame}} = require("blackjack-dealer-logic");
   
   singleDeckGame.deal();
   
+  getCoins(singleDeckGame.getUserChips());
   
   const userHand = singleDeckGame.getUserHand();
-  
+  const money = singleDeckGame.getUserChips();
   
   generateCard(userHand.getCards()[0]);
   generateCard(userHand.getCards()[1]);
@@ -43,59 +44,12 @@ hitButton.addEventListener("click", () =>{
     generateCard(card);
   })
 })
-const {
-  default: { singleDeckGame } } = require("blackjack-dealer-logic");
+const stand = document.getElementById("stand");
+stand.addEventListener("click", () =>{
+  singleDeckGame.standUser();
+  console.log("sucess")
 
-const buttons = document.querySelectorAll(".button");
-const hit = document.querySelectorAll(".hit");
-const stand = document.querySelectorAll(".stand");
-const double = document.querySelectorAll(".double");
+})
+function getCoins(money){
 
-hit.forEach(function(button) {
-  button.addEventListener("click", () => {
-    hitDealer()
-  })
-});
-
-let enterName = document.getElementById('prompt');
-enterName.onclick = function() {
-  let userResponse = prompt('Type in your name, chief.');
-  let displayContainer = document.getElementById('promptResponse');
-  displayContainer.innerHTML = 'Welcome to the swankiest blackjack table in Cbus, ' + userResponse;
 }
-
-
-
-// ~~Alex reference 11:22 a.m. 10/22/2019:~~
-// backgroundButton.addEventListener("click", () => {
-//   const paragraph = document.querySelector(".newParagraph");
-
-//   paragraph.classList.add("redBackground");
-//   paragraph.classList.remove("newParagraph");
-// })
-
-// stand.forEach(function(button) {
-//   button.addEventListener("click", () => {
-//     stand()
-//   })
-// });
-
-// double.forEach(function(button) {
-//   button.addEventListener("click", () => {
-//     double(card : Card)
-//   })
-// });
-// const backgroundButton = document.querySelector(".addBackground");
-
-button.forEach(function(button) {
-  button.addEventListener("click", () => {
-    const paragraph = document.createElement("p");
-
-    paragraph.classList.add("newParagraph");
-
-    paragraph.textContent = "My new paragraph!";
-
-    document.body.append(paragraph);
-  });
-});
-
