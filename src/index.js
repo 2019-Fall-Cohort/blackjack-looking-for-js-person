@@ -43,19 +43,6 @@ hitButton.addEventListener("click", () =>{
     generateCard(card);
   })
 })
-const {
-  default: { singleDeckGame } } = require("blackjack-dealer-logic");
-
-const buttons = document.querySelectorAll(".button");
-const hit = document.querySelectorAll(".hit");
-const stand = document.querySelectorAll(".stand");
-const double = document.querySelectorAll(".double");
-
-hit.forEach(function(button) {
-  button.addEventListener("click", () => {
-    hitDealer()
-  })
-});
 
 let enterName = document.getElementById('prompt');
 enterName.onclick = function() {
@@ -66,7 +53,6 @@ enterName.onclick = function() {
 
 
 
-<<<<<<< HEAD
 function getChips(){
   const userAmount = singleDeckGame.getUserChips();
   const change = document.createElement("h3");
@@ -75,45 +61,4 @@ function getChips(){
 
 }
 
-function bet(userAmount){
-  if(userAmount> 0){
-    
-  }
-
-}
-  
-=======
-// ~~Alex reference 11:22 a.m. 10/22/2019:~~
-// backgroundButton.addEventListener("click", () => {
-//   const paragraph = document.querySelector(".newParagraph");
-
-//   paragraph.classList.add("redBackground");
-//   paragraph.classList.remove("newParagraph");
-// })
-
-// stand.forEach(function(button) {
-//   button.addEventListener("click", () => {
-//     stand()
-//   })
-// });
-
-// double.forEach(function(button) {
-//   button.addEventListener("click", () => {
-//     double(card : Card)
-//   })
-// });
-// const backgroundButton = document.querySelector(".addBackground");
-
-button.forEach(function(button) {
-  button.addEventListener("click", () => {
-    const paragraph = document.createElement("p");
-
-    paragraph.classList.add("newParagraph");
-
-    paragraph.textContent = "My new paragraph!";
-
-    document.body.append(paragraph);
-  });
-});
->>>>>>> 9a06e35d125dd2dcf666ced86a659fbe402e986d
 
