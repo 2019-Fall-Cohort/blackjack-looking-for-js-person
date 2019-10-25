@@ -5,10 +5,11 @@
 }
 
 .playing-card {
-    background-color: red;
+    background-color: white;
     border-radius: 0.5rem;
     display: flex;
     height: 8rem;
+    justify-content: center;
     padding: 1rem;
     width: 5rem;
 }
@@ -18,14 +19,12 @@
     background-color: green;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 20rem;
+    justify-content: center;
 }
 
 .value-container {
-    align-items: center;
     border: 1px solid;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
+    border-color: red;
+    padding: 0.5 rem;
 }
