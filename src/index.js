@@ -40,9 +40,10 @@ hitButton.addEventListener("click", () =>{
   const table = document.querySelector(".table");
   table.innerHTML = "";
   singleDeckGame.getUserHand().getCards().forEach( (card) =>{
-    generateCard(card);
+    generateCard(card); 
   })
-})
+}
+)
 
 let enterName = document.getElementById('prompt');
 enterName.onclick = function() {
@@ -51,7 +52,15 @@ enterName.onclick = function() {
   displayContainer.innerHTML = 'Welcome to the swankiest blackjack table in Cbus, ' + userResponse;
 }
 
-
+let restartGame = document.getElementById('restart');
+restartGame.addEventListener('click', () => {
+  document.location.reload();
+  alert('Game will be reset.');
+  // singleDeckGame.resetPlayers();
+  // generateCard(userHand.getCards()[0]);
+  // generateCard(userHand.getCards()[1]);
+  // singleDeckGame.resetPlayers();
+})
 
 function getChips(){
   const userAmount = singleDeckGame.getUserChips();
@@ -60,5 +69,3 @@ function getChips(){
   document.body.append(change);
 
 }
-
-

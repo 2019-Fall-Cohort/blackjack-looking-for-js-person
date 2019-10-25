@@ -16,7 +16,7 @@
         <i class="fa fa-caret-down"></i>
       </button>
         <div class="dropdown-content">
-          <a href="#">Restart Game</a>
+          <a href="#" id="restart">Restart Game</a>
           <a href="#" id="prompt">Enter Name</a>
         </div>
         <output name="result" id="promptResponse"></output>
@@ -33,15 +33,26 @@
         <button class="stand">Stand</button>
         <button class="double">Double!</button>
         <button id = "score" > Score</button>
-        <button id = "clear">Restart</button>
-        
+        <!-- <button id = "clear">Restart</button> -->
         
         <section class="table">
-            <section class="playing-card">
+            <h2>User Hand</h2>
+            <wrapper class="user-hand-grid-item">
+              <section class="playing-card">
                 <section class="value-container">
                     <span class="value">placeholder</span>
                     <span class="suit">placeholder</span>
                 </section>
+            </section>
+          </wrapper>
+            <h2>Dealer Hand</h2>
+              <wrapper class="dealer-hand-grid-item">
+                <section class="playing-card">
+                  <section class="value-container">
+                    <span class="value">placeholder</span>
+                    <span class="suit">placeholder</span>
+                </section>
+              </wrapper>
             </section>
         </section>
     </main>
